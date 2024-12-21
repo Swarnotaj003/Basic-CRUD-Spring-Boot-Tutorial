@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21-jdk-alpine-slim-buster AS build
+FROM jelastic/maven:3.9.5-openjdk-21 AS build
 COPY . .
 RUN mvn clean package -DskipTests
 
