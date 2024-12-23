@@ -4,5 +4,5 @@ RUN mvn clean package -DskipTests
 
 FROM openjdk:21-jdk-slim
 COPY --from=build /target/SpringStudentCRUD-0.0.1-SNAPSHOT.jar SpringStudentCRUD.jar
-EXPOSE 8080
+EXPOSE 8081
 ENTRYPOINT ["java","-jar","SpringStudentCRUD.jar"]
